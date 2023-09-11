@@ -1,0 +1,88 @@
+openapi: 3.0.0
+info:
+  title: Contract Sprint 1
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths: 
+  /post:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Add post
+      operationId: insert-post
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  id:
+                    type: integer
+        '422':
+          description: 'Bad Request Unprocessable Entity'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  statusCode:
+                    type: integer
+                  message:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        target:
+                          type: object
+                        property:
+                          type: string
+                        constraints:
+                          type: object
+                          properties:
+                            isString: 
+                              type: string
+                            minLength: 
+                              type: string
+                  error:
+                    type: string
+        '400':
+          description: 'Bad Request'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  timestamp:
+                    type: string
+                  status:
+                    type: integer
+                  error:
+                    type: string
+                  message:
+                    type: string
+                  path:
+                    type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+              required:
+                - name
+components:
+  securitySchemes:
+    bearerAuth:            # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT    # optional, arbitrary value for documentation purposes
+
+security:
+  - bearerAuth: []         # use the same name as above
