@@ -23,6 +23,9 @@ paths:
                     type: string
                   id:
                     type: integer
+              examples:
+                name:
+                  value: Product A
         '422':
           description: 'Bad Request Unprocessable Entity'
           content:
