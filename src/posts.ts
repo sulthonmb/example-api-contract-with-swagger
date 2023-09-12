@@ -19,7 +19,7 @@ export const postApi = c.router({
     method: "POST",
     path: "/posts",
     headers: z.object({
-      Authorization: z.string(),
+      Authorization: z.any(),
     }),
     responses: {
       201: PostSchema,
