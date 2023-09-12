@@ -1,0 +1,23 @@
+{
+  "name": "@ts-rest-example/contract",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "swagger": "ts-node --files ./generateJsonSwagger.ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@ts-rest/core": "^3.19.0",
+    "@ts-rest/open-api": "^3.30.2",
+    "fs": "^0.0.1-security",
+    "ts-node": "^10.9.1",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "tsconfig": "7.0.0",
+    "typescript": "^4.5.2"
+  }
+}
