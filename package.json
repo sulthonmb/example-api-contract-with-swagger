@@ -7,7 +7,8 @@
     "/dist"
   ],
   "scripts": {
-    "build": "tsc && ts-node --files ./generateJsonSwagger.ts"
+    "build": "tsc",
+    "build:swagger": "ts-node --files ./generateJsonSwagger.ts"
   },
   "license": "MIT",
   "dependencies": {
