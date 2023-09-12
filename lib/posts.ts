@@ -11,8 +11,7 @@ export type Post = {
 
 export const PostSchema = z.object({
   id: z.string(),
-  title: z.string(),
-  body: z.string(),
+  name: z.string(),
 });
 
 export const postApi = c.router({

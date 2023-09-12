@@ -27,14 +27,11 @@ paths:
                 properties:
                   id:
                     type: "string"
-                  title:
-                    type: "string"
-                  body:
+                  name:
                     type: "string"
                 required:
                   - "id"
-                  - "title"
-                  - "body"
+                  - "name"
     get:
       summary: "Get all posts"
       tags:
@@ -52,14 +49,11 @@ paths:
                   properties:
                     id:
                       type: "string"
-                    title:
-                      type: "string"
-                    body:
+                    name:
                       type: "string"
                   required:
                     - "id"
-                    - "title"
-                    - "body"
+                    - "name"
   /posts/{id}:
     get:
       summary: "Get a post by id"
@@ -81,14 +75,11 @@ paths:
                 properties:
                   id:
                     type: "string"
-                  title:
-                    type: "string"
-                  body:
+                  name:
                     type: "string"
                 required:
                   - "id"
-                  - "title"
-                  - "body"
+                  - "name"
                 nullable: true
     patch:
       summary: "Update a post by id"
@@ -121,14 +112,11 @@ paths:
                 properties:
                   id:
                     type: "string"
-                  title:
-                    type: "string"
-                  body:
+                  name:
                     type: "string"
                 required:
                   - "id"
-                  - "title"
-                  - "body"
+                  - "name"
     delete:
       summary: "Delete a post by id"
       tags:
@@ -149,14 +137,11 @@ paths:
                 properties:
                   id:
                     type: "string"
-                  title:
-                    type: "string"
-                  body:
+                  name:
                     type: "string"
                 required:
                   - "id"
-                  - "title"
-                  - "body"
+                  - "name"
                 nullable: true
 info:
   title: "Posts API"
