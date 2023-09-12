@@ -43,6 +43,11 @@ paths:
                   - "id"
                   - "name"
                   - "email"
+              examples:
+                CREATE_EMPLOYEE_SUCCESS:
+                  value:
+                    name: Jill Doe
+                    email: doe@gmail.com
       security:
         - bearerAuth: []
   /posts/{id}:
