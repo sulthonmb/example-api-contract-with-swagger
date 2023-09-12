@@ -5,7 +5,12 @@ paths:
       summary: "Create a post"
       tags:
         - "posts"
-      parameters: []
+      parameters:
+        - name: "Authorization"
+          in: "header"
+          required: true
+          schema:
+            type: "string"
       requestBody:
         description: "Body"
         content:
@@ -26,7 +31,7 @@ paths:
                 type: "object"
                 properties:
                   id:
-                    type: "string"
+                    type: "number"
                   name:
                     type: "string"
                 required:
@@ -48,7 +53,7 @@ paths:
                   type: "object"
                   properties:
                     id:
-                      type: "string"
+                      type: "number"
                     name:
                       type: "string"
                   required:
@@ -74,7 +79,7 @@ paths:
                 type: "object"
                 properties:
                   id:
-                    type: "string"
+                    type: "number"
                   name:
                     type: "string"
                 required:
@@ -111,7 +116,7 @@ paths:
                 type: "object"
                 properties:
                   id:
-                    type: "string"
+                    type: "number"
                   name:
                     type: "string"
                 required:
@@ -136,7 +141,7 @@ paths:
                 type: "object"
                 properties:
                   id:
-                    type: "string"
+                    type: "number"
                   name:
                     type: "string"
                 required:

@@ -10,7 +10,7 @@ export type Post = {
 };
 
 export const PostSchema = z.object({
-  id: z.string(),
+  id: z.number(),
   name: z.string(),
 });
 
@@ -18,6 +18,9 @@ export const postApi = c.router({
   createPost: {
     method: "POST",
     path: "/posts",
+    headers: z.object({
+      Authorization: z.string(),
+    }),
     responses: {
       201: PostSchema,
     },
