@@ -26,6 +26,13 @@ export declare const rootApi: {
                 }>;
             };
             path: "/posts";
+            headers: import("zod").ZodObject<{
+                Authorization: import("zod").ZodUndefined;
+            }, "strip", import("zod").ZodTypeAny, {
+                Authorization?: undefined;
+            }, {
+                Authorization?: undefined;
+            }>;
         };
         getPost: {
             summary: "Get a post by id";

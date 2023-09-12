@@ -5,7 +5,10 @@ paths:
       summary: "Create a post"
       tags:
         - "posts"
-      parameters: []
+      parameters:
+        - name: "Authorization"
+          in: "header"
+          schema: {}
       requestBody:
         description: "Body"
         content:
