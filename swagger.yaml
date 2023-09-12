@@ -84,6 +84,12 @@ paths:
                   - "name"
                   - "email"
                 nullable: true
+              examples:
+                200_OKAY:
+                  value:
+                    id: 1
+                    name: Jill Doe
+                    email: doe@gmail.com
       security:
         - bearerAuth: []
 info:
