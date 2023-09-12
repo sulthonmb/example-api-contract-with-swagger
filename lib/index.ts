@@ -1,2 +1,5 @@
-export * from "./api";
-export * from "./posts";
+module.exports = {
+    api: require("./api"),
+    posts: require("./posts"),
+};
+  
