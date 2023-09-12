@@ -20,6 +20,7 @@ exports.postApi = c.router({
         },
         body: zod_1.z.object({
             name: zod_1.z.string(),
+            email: zod_1.z.string(),
         }),
         summary: "Create a post",
     },

@@ -18,10 +18,13 @@ export declare const postApi: {
     createPost: {
         body: z.ZodObject<{
             name: z.ZodString;
+            email: z.ZodString;
         }, "strip", z.ZodTypeAny, {
             name: string;
+            email: string;
         }, {
             name: string;
+            email: string;
         }>;
         summary: "Create a post";
         method: "POST";

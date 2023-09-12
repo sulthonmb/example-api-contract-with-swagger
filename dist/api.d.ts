@@ -3,10 +3,13 @@ export declare const rootApi: {
         createPost: {
             body: import("zod").ZodObject<{
                 name: import("zod").ZodString;
+                email: import("zod").ZodString;
             }, "strip", import("zod").ZodTypeAny, {
                 name: string;
+                email: string;
             }, {
                 name: string;
+                email: string;
             }>;
             summary: "Create a post";
             method: "POST";
