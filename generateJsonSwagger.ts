@@ -2,6 +2,7 @@ import { promises as fsPromises } from 'fs';
 import { join } from 'path';
 import { rootApi } from './lib/index';
 import { generateOpenApi } from '@ts-rest/open-api';
+const YAML = require('json-to-pretty-yaml');
 
 const openApiDocument = generateOpenApi(rootApi, {
   info: {
@@ -35,4 +36,5 @@ async function asyncWriteFile(filename: string, data: any) {
   }
 }
 
-asyncWriteFile('./swagger.json', JSON.stringify(openApiDocument));
+const data = YAML.stringify(openApiDocument);
+asyncWriteFile('./swagger.yaml', data);
