@@ -19,9 +19,6 @@ export const postApi = c.router({
   createPost: {
     method: "POST",
     path: "/posts",
-    headers: z.object({
-      Authorization: z.string(),
-    }),
     responses: {
       201: PostSchema,
     },
@@ -34,9 +31,6 @@ export const postApi = c.router({
   getPost: {
     method: "GET",
     path: `/posts/:id`,
-    headers: z.object({
-      Authorization: z.string(),
-    }),
     responses: {
       200: PostSchema.nullable(),
     },

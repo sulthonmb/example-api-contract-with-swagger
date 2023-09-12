@@ -13,9 +13,6 @@ exports.postApi = c.router({
     createPost: {
         method: "POST",
         path: "/posts",
-        headers: zod_1.z.object({
-            Authorization: zod_1.z.string(),
-        }),
         responses: {
             201: exports.PostSchema,
         },
@@ -28,9 +25,6 @@ exports.postApi = c.router({
     getPost: {
         method: "GET",
         path: "/posts/:id",
-        headers: zod_1.z.object({
-            Authorization: zod_1.z.string(),
-        }),
         responses: {
             200: exports.PostSchema.nullable(),
         },

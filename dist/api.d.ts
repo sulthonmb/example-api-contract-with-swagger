@@ -29,13 +29,6 @@ export declare const rootApi: {
                 }>;
             };
             path: "/posts";
-            headers: import("zod").ZodObject<{
-                Authorization: import("zod").ZodString;
-            }, "strip", import("zod").ZodTypeAny, {
-                Authorization: string;
-            }, {
-                Authorization: string;
-            }>;
         };
         getPost: {
             summary: "Get a post by id";
@@ -56,13 +49,6 @@ export declare const rootApi: {
                 }>>;
             };
             path: "/posts/:id";
-            headers: import("zod").ZodObject<{
-                Authorization: import("zod").ZodString;
-            }, "strip", import("zod").ZodTypeAny, {
-                Authorization: string;
-            }, {
-                Authorization: string;
-            }>;
         };
     };
 };

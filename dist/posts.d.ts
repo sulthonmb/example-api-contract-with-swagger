@@ -47,13 +47,6 @@ export declare const postApi: {
             }>;
         };
         path: "/posts";
-        headers: z.ZodObject<{
-            Authorization: z.ZodString;
-        }, "strip", z.ZodTypeAny, {
-            Authorization: string;
-        }, {
-            Authorization: string;
-        }>;
     };
     getPost: {
         summary: "Get a post by id";
@@ -74,12 +67,5 @@ export declare const postApi: {
             }>>;
         };
         path: "/posts/:id";
-        headers: z.ZodObject<{
-            Authorization: z.ZodString;
-        }, "strip", z.ZodTypeAny, {
-            Authorization: string;
-        }, {
-            Authorization: string;
-        }>;
     };
 };
