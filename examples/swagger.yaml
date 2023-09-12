@@ -1,0 +1,105 @@
+openapi: "3.0.2"
+paths:
+  /posts:
+    post:
+      summary: "Create a post"
+      tags:
+        - "posts"
+      parameters: []
+      requestBody:
+        description: "Body"
+        content:
+          application/json:
+            schema:
+              type: "object"
+              properties:
+                name:
+                  type: "string"
+                email:
+                  type: "string"
+              required:
+                - "name"
+                - "email"
+            examples:
+              CREATE_EMPLOYEE_SUCCESS:
+                value:
+                  name: Jill Doe
+                  email: doe@gmail.com
+      responses:
+        201:
+          description: "201"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  id:
+                    type: "number"
+                  name:
+                    type: "string"
+                  email:
+                    type: "string"
+                required:
+                  - "id"
+                  - "name"
+                  - "email"
+              examples:
+                CREATE_EMPLOYEE_SUCCESS:
+                  value:
+                    id: 1
+                    name: Jill Doe
+                    email: doe@gmail.com
+      security:
+        - bearerAuth: []
+  /posts/{id}:
+    get:
+      summary: "Get a post by id"
+      tags:
+        - "posts"
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: number
+          examples:
+            200_OKAY:
+              value: 1
+      responses:
+        200:
+          description: "200"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  id:
+                    type: "number"
+                  name:
+                    type: "string"
+                  email:
+                    type: "string"
+                required:
+                  - "id"
+                  - "name"
+                  - "email"
+                nullable: true
+              examples:
+                200_OKAY:
+                  value:
+                    id: 1
+                    name: Jill Doe
+                    email: doe@gmail.com
+      security:
+        - bearerAuth: []
+info:
+  title: "Posts API"
+  version: "1.0.0"
+security:
+  - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: "http"
+      scheme: "bearer"
+      bearerFormat: "JWT"
