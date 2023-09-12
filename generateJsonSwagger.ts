@@ -1,6 +1,6 @@
 import { promises as fsPromises } from 'fs';
 import { join } from 'path';
-import { rootApi } from './lib/index';
+import { rootApi } from './src/index';
 import { generateOpenApi } from '@ts-rest/open-api';
 const YAML = require('json-to-pretty-yaml');
 
