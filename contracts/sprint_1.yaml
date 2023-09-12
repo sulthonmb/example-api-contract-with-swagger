@@ -5,6 +5,32 @@ info:
 servers:
   - url: 'http://localhost:3000'
 paths: 
+  "/post/{id}":
+    get:
+      summary: Get single post
+      operationId: get-post
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Parameter description in CommonMark or HTML.
+          schema:
+            type : integer
+            format: int64
+            minimum: 1
+
+      responses:
+        '200':
+          description: Get success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
   /post:
     post:
       security:
@@ -89,3 +115,4 @@ components:
 
 security:
   - bearerAuth: []         # use the same name as above
+  
