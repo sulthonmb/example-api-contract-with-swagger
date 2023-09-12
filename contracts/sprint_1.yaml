@@ -31,6 +31,8 @@ paths:
                     type: integer
                   name:
                     type: string
+                  color:
+                    type: string
         '404':
           description: Not Found
           content:
