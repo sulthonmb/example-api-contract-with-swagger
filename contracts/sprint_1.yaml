@@ -33,6 +33,8 @@ paths:
                     type: string
                   color:
                     type: string
+                required:
+                  - color
         '404':
           description: Not Found
           content:
