@@ -20,6 +20,9 @@ paths:
               required:
                 - "name"
                 - "email"
+              example:
+                name: "product a"
+                email: "sulthon@google.com"
       responses:
         201:
           description: "201"
