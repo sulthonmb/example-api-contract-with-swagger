@@ -46,6 +46,7 @@ paths:
               examples:
                 CREATE_EMPLOYEE_SUCCESS:
                   value:
+                    id: 1
                     name: Jill Doe
                     email: doe@gmail.com
       security:
