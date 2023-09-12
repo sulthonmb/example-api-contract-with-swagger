@@ -13,13 +13,10 @@ paths:
             schema:
               type: "object"
               properties:
-                title:
-                  type: "string"
-                body:
+                name:
                   type: "string"
               required:
-                - "title"
-                - "body"
+                - "name"
       responses:
         201:
           description: "201"

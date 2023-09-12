@@ -23,8 +23,7 @@ export const postApi = c.router({
       201: PostSchema,
     },
     body: z.object({
-      title: z.string(),
-      body: z.string(),
+      name: z.string(),
     }),
     summary: "Create a post",
   },
