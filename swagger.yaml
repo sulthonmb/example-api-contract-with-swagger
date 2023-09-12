@@ -5,12 +5,7 @@ paths:
       summary: "Create a post"
       tags:
         - "posts"
-      parameters:
-        - name: "Authorization"
-          in: "header"
-          required: true
-          schema:
-            type: "string"
+      parameters: []
       requestBody:
         description: "Body"
         content:
@@ -20,8 +15,11 @@ paths:
               properties:
                 name:
                   type: "string"
+                email:
+                  type: "string"
               required:
                 - "name"
+                - "email"
       responses:
         201:
           description: "201"

@@ -12,9 +12,6 @@ exports.postApi = c.router({
     createPost: {
         method: "POST",
         path: "/posts",
-        headers: zod_1.z.object({
-            Authorization: zod_1.z.any(),
-        }),
         responses: {
             201: exports.PostSchema,
         },

@@ -41,13 +41,6 @@ export declare const postApi: {
             }>;
         };
         path: "/posts";
-        headers: z.ZodObject<{
-            Authorization: z.ZodAny;
-        }, "strip", z.ZodTypeAny, {
-            Authorization?: any;
-        }, {
-            Authorization?: any;
-        }>;
     };
     getPost: {
         summary: "Get a post by id";
