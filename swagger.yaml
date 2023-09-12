@@ -20,6 +20,11 @@ paths:
               required:
                 - "name"
                 - "email"
+            examples:
+              CREATE_EMPLOYEE_SUCCESS:
+                value:
+                  name: Jill Doe
+                  email: doe@gmail.com
       responses:
         201:
           description: "201"
