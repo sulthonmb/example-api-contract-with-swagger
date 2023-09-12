@@ -11,13 +11,7 @@ const openApiDocument = generateOpenApi(rootApi, {
   },
 });
 
-// ✅ write to file ASYNCHRONOUSLY
 async function asyncWriteFile(filename: string, data: any) {
-  /**
-   * flags:
-   *  - w = Open file for reading and writing. File is created if not exists
-   *  - a+ = Open file for reading and appending. The file is created if not exists
-   */
   try {
     await fsPromises.writeFile(join(__dirname, filename), data, {
       flag: 'w',
@@ -27,12 +21,38 @@ async function asyncWriteFile(filename: string, data: any) {
       join(__dirname, filename),
       'utf-8',
     );
-    console.log(contents); // 👉️ "One Two Three Four"
 
     return contents;
   } catch (err) {
     console.log(err);
     return 'Something went wrong';
+  }
+}
+
+openApiDocument.security = [
+  {
+    "bearerAuth": []
+  }
+]
+
+openApiDocument.components = {
+  securitySchemes: {
+    bearerAuth: {
+      type: "http",
+      scheme: "bearer",
+      bearerFormat: "JWT"
+    }
+  }
+}
+
+for (const path in openApiDocument.paths) {
+  for (const obj in openApiDocument.paths[path]){
+    const pathApi = openApiDocument.paths[path][obj]
+    pathApi.security = [
+      {
+        "bearerAuth": []
+      }
+    ]
   }
 }
 

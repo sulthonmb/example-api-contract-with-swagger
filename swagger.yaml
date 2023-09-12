@@ -20,9 +20,6 @@ paths:
               required:
                 - "name"
                 - "email"
-              example:
-                name: "product a"
-                email: "sulthon@google.com"
       responses:
         201:
           description: "201"
@@ -41,6 +38,8 @@ paths:
                   - "id"
                   - "name"
                   - "email"
+      security:
+        - bearerAuth: []
   /posts/{id}:
     get:
       summary: "Get a post by id"
@@ -71,6 +70,16 @@ paths:
                   - "name"
                   - "email"
                 nullable: true
+      security:
+        - bearerAuth: []
 info:
   title: "Posts API"
   version: "1.0.0"
+security:
+  - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: "http"
+      scheme: "bearer"
+      bearerFormat: "JWT"
