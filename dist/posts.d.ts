@@ -7,12 +7,15 @@ export type Post = {
 export declare const PostSchema: z.ZodObject<{
     id: z.ZodNumber;
     name: z.ZodString;
+    email: z.ZodString;
 }, "strip", z.ZodTypeAny, {
     id: number;
     name: string;
+    email: string;
 }, {
     id: number;
     name: string;
+    email: string;
 }>;
 export declare const postApi: {
     createPost: {
@@ -32,12 +35,15 @@ export declare const postApi: {
             201: z.ZodObject<{
                 id: z.ZodNumber;
                 name: z.ZodString;
+                email: z.ZodString;
             }, "strip", z.ZodTypeAny, {
                 id: number;
                 name: string;
+                email: string;
             }, {
                 id: number;
                 name: string;
+                email: string;
             }>;
         };
         path: "/posts";
@@ -56,12 +62,15 @@ export declare const postApi: {
             200: z.ZodNullable<z.ZodObject<{
                 id: z.ZodNumber;
                 name: z.ZodString;
+                email: z.ZodString;
             }, "strip", z.ZodTypeAny, {
                 id: number;
                 name: string;
+                email: string;
             }, {
                 id: number;
                 name: string;
+                email: string;
             }>>;
         };
         path: "/posts/:id";

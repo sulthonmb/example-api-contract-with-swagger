@@ -7,6 +7,7 @@ var c = (0, core_1.initContract)();
 exports.PostSchema = zod_1.z.object({
     id: zod_1.z.number(),
     name: zod_1.z.string(),
+    email: zod_1.z.string(),
 });
 exports.postApi = c.router({
     createPost: {

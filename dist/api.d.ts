@@ -17,12 +17,15 @@ export declare const rootApi: {
                 201: import("zod").ZodObject<{
                     id: import("zod").ZodNumber;
                     name: import("zod").ZodString;
+                    email: import("zod").ZodString;
                 }, "strip", import("zod").ZodTypeAny, {
                     id: number;
                     name: string;
+                    email: string;
                 }, {
                     id: number;
                     name: string;
+                    email: string;
                 }>;
             };
             path: "/posts";
@@ -41,12 +44,15 @@ export declare const rootApi: {
                 200: import("zod").ZodNullable<import("zod").ZodObject<{
                     id: import("zod").ZodNumber;
                     name: import("zod").ZodString;
+                    email: import("zod").ZodString;
                 }, "strip", import("zod").ZodTypeAny, {
                     id: number;
                     name: string;
+                    email: string;
                 }, {
                     id: number;
                     name: string;
+                    email: string;
                 }>>;
             };
             path: "/posts/:id";

@@ -37,9 +37,12 @@ paths:
                     type: "number"
                   name:
                     type: "string"
+                  email:
+                    type: "string"
                 required:
                   - "id"
                   - "name"
+                  - "email"
   /posts/{id}:
     get:
       summary: "Get a post by id"
@@ -68,9 +71,12 @@ paths:
                     type: "number"
                   name:
                     type: "string"
+                  email:
+                    type: "string"
                 required:
                   - "id"
                   - "name"
+                  - "email"
                 nullable: true
 info:
   title: "Posts API"

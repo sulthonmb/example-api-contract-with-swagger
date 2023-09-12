@@ -12,6 +12,7 @@ export type Post = {
 export const PostSchema = z.object({
   id: z.number(),
   name: z.string(),
+  email: z.string(),
 });
 
 export const postApi = c.router({
