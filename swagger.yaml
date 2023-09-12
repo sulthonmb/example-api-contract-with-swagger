@@ -46,13 +46,13 @@ paths:
       tags:
         - "posts"
       parameters:
-        - name: "id"
-          in: "path"
+        - name: id
+          in: path
           required: true
           schema:
-            type: "number"
+            type: number
           examples:
-            FIRST_POST:
+            200_OKAY:
               value: 1
       responses:
         200:
