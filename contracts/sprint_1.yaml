@@ -18,9 +18,6 @@ paths:
             type : integer
             format: int64
             minimum: 1
-          examples:
-            PRODUCT_A:
-              value: 1
 
       responses:
         '200':
