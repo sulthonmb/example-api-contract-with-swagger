@@ -50,8 +50,10 @@ paths:
           in: "path"
           required: true
           schema:
-            type: "string"
-            example: "1"
+            type: "number"
+          examples:
+            FIRST_POST:
+              VALUE: 1
       responses:
         200:
           description: "200"
