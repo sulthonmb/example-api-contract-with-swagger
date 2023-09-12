@@ -18,6 +18,9 @@ paths:
             type : integer
             format: int64
             minimum: 1
+          examples:
+            PRODUCT:
+              value: 1
 
       responses:
         '200':
@@ -115,4 +118,3 @@ components:
 
 security:
   - bearerAuth: []         # use the same name as above
- d
