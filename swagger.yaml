@@ -8,7 +8,9 @@ paths:
       parameters:
         - name: "Authorization"
           in: "header"
-          schema: {}
+          required: true
+          schema:
+            type: "string"
       requestBody:
         description: "Body"
         content:

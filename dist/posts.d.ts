@@ -42,11 +42,11 @@ export declare const postApi: {
         };
         path: "/posts";
         headers: z.ZodObject<{
-            Authorization: z.ZodUndefined;
+            Authorization: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            Authorization?: undefined;
+            Authorization: string;
         }, {
-            Authorization?: undefined;
+            Authorization: string;
         }>;
     };
     getPost: {

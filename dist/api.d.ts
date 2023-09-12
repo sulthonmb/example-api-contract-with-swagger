@@ -27,11 +27,11 @@ export declare const rootApi: {
             };
             path: "/posts";
             headers: import("zod").ZodObject<{
-                Authorization: import("zod").ZodUndefined;
+                Authorization: import("zod").ZodString;
             }, "strip", import("zod").ZodTypeAny, {
-                Authorization?: undefined;
+                Authorization: string;
             }, {
-                Authorization?: undefined;
+                Authorization: string;
             }>;
         };
         getPost: {

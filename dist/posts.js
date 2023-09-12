@@ -13,7 +13,7 @@ exports.postApi = c.router({
         method: "POST",
         path: "/posts",
         headers: zod_1.z.object({
-            Authorization: zod_1.z.undefined(),
+            Authorization: zod_1.z.string(),
         }),
         responses: {
             201: exports.PostSchema,
