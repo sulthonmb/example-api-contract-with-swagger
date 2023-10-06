@@ -25,6 +25,10 @@ paths:
                 value:
                   name: Jill Doe
                   email: doe@gmail.com
+              CREATE_EMPLOYEE_SUCCESS_1:
+                value:
+                  name: Test
+                  email: test@gmail.com
       responses:
         201:
           description: "201"
@@ -49,6 +53,11 @@ paths:
                     id: 1
                     name: Jill Doe
                     email: doe@gmail.com
+                CREATE_EMPLOYEE_SUCCESS_1:
+                  value:
+                    id: 2
+                    name: Test
+                    email: test@gmail.com
       security:
         - bearerAuth: []
   /posts/{id}:
